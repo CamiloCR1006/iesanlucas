@@ -67,6 +67,10 @@
                         Egresados
                     </a>
 
+                    <a href="admin/login" class=" px-4 py-2 rounded drop-shadow-2xl">
+                        <img class="w-8 h-8" src="{{ asset('img/user.svg') }}" alt="">
+                    </a>
+
                 </div>
 
                 <!-- Botón hamburguesa (solo móvil) -->

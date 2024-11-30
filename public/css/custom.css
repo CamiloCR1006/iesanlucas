@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.burger-button{
+    display: none;
+}
+
 
 
 @media (max-width: 1200px) {
