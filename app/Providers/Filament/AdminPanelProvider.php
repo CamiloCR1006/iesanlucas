@@ -26,10 +26,9 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->favicon(asset('img/favicon.png'))
             ->id('admin')
-            ->brandLogo(asset('img/icon2.png'))
-            #->brandLogoHeight("150px")
+            #->brandLogo(asset('img/icon2.png'))
             ->brandName('Institución Educativa San Lucas')
-            ->darkMode(false)
+            /* ->darkMode(false) */
             ->path('admin')
             ->login()
             ->colors([

@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+}
+
+.burger-button{
+    display: none;
+}
+
+
+
+@media (max-width: 1200px) {
+    .header{
+        display: none;
+    }
+
+    .container-head{
+        justify-content: space-between;
+    }
+
+    .burger-button{
+        display: block;
+    }
+}
