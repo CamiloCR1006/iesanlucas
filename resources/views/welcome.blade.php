@@ -21,6 +21,8 @@
         href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 
     <style>
@@ -32,6 +34,11 @@
             font-family: "Instrument Serif", serif;
             font-size: 48px;
             font-weight: 700;
+        }
+
+        .button-enviar {
+            font-family: "Instrument Serif", serif;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -186,8 +193,15 @@
 
 
     </section>
+    {{-- Sección del Formulario --}}
+    <section class="bg-[#b6d7a8]">
+        <div class=" w-full pt-8">
+            <h1 class=" text-center head">
+                Dejanos un mensaje
+            </h1>
+            @livewire('form-section')
 
-    <section>
+        </div>
 
     </section>
 </body>
