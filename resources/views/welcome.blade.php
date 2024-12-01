@@ -175,40 +175,20 @@
 
 
     </section>
-    <section>
-        <div class="bg-[#ff8080] w-full pt-8">
+    <section class="pb-10 bg-[#ff8080]">
+        <div class=" w-full pt-8">
             <h1 class=" text-center head">
                 Novedades
             </h1>
-            @php
-                $query = \App\Models\Novelty::where('active', true);
-                $novelties = $query->get();
-            @endphp
-
-            <div class="flex flex-wrap p-3 sm:px-20 sm:py-10 gap-x-9 gap-y-9 justify-center">
-                @foreach ($novelties as $item)
-                    <div class="xl:max-w-lg w-full bg-white rounded-lg shadow border border-white">
-                        <a class="w-full flex justify-center">
-                            <img class="rounded-t-lg" src="{{ asset("storage/{$item->filepath}") }}"
-                                alt="" />
-                        </a>
-                        <div class="p-5 bg-white rounded-b-lg">
-                            <a>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ $item->title }}
-                                </h5>
-                            </a>
-                            <p class="mb-3 font-normal text-black overflow-auto max-h-32">{{ $item->description }}
-                            <p>
-                            <p class="text-xs text-gray-400">
-                                {{ \Carbon\Carbon::parse($item->published_at)->translatedFormat('F j') }}
-                            </p>
-                        </div>
-                    </div>
-                @endforeach
-
-            </div>
+            @livewire('novelty-section')
 
         </div>
+
+
+    </section>
+
+    <section>
+
     </section>
 </body>
 
