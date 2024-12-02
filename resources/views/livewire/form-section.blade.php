@@ -1,5 +1,5 @@
-<div class="flex justify-center w-full py-10">
-    <div class="bg-white max-w-[50%] w-full h-auto rounded-md px-10 py-8">
+<div class="px-4 flex justify-center w-full py-10">
+    <div class="bg-white md:max-w-[50%] w-full h-auto rounded-md px-10 py-8">
         <form class="mx-auto ">
             <label for="name" class="block mb-2 font-bold">Nombre</label>
             <input required wire:model="name" type="text"
