@@ -7,6 +7,10 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Toggle;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -54,6 +58,18 @@ class Featured extends Model
                         ->label(self::$ACTIVE),
 
                 ])
+        ];
+    }
+
+    public static function getColumnsTable() : array {
+        return [
+            ImageColumn::make('filepath')
+                ->label(self::$FILEPATH)
+                ->size(200),
+            TextColumn::make('published_at')
+                ->label(self::$PUBLISHED_AT),
+            ToggleColumn::make('active')
+                ->label(self::$ACTIVE)
         ];
     }
 }

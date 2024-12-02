@@ -18,7 +18,11 @@ class FeedbackResource extends Resource
 {
     protected static ?string $model = Feedback::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left-ellipsis';
+
+    protected static ?string $modelLabel = "Mensaje";
+
+    protected static ?string $pluralModelLabel = "Mensajes";
 
     public static function form(Form $form): Form
     {
@@ -37,20 +41,14 @@ class FeedbackResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->columns([
-                //
-            ])
+            ->columns(Feedback::getColumnsTable())
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
             ]);
     }
 

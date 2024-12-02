@@ -5,6 +5,9 @@ namespace App\Models;
 use Filament\Infolists\Components\IconEntry;
 use Filament\Infolists\Components\Section;
 use Filament\Infolists\Components\TextEntry;
+use Filament\Notifications\Notification;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -43,8 +46,34 @@ class Feedback extends Model
                             TextEntry::make('read_at')
                                 ->label('Fecha de lectura'),
                         ]),
-                    
+
                 ])
+        ];
+    }
+
+    public static function getColumnsTable()
+    {
+        return [
+            TextColumn::make('name')
+                ->label('Nombre'),
+            TextColumn::make('message')
+                ->label('Mensaje')
+                ->wrap(),
+            ToggleColumn::make('is_read')
+                ->afterStateUpdated(function (Feedback $record, bool $state): void {
+                    if ($state) {
+                        $record->read_by = auth()->user()->id;
+                        $record->read_at = now();
+                        $record->save();
+
+                        Notification::make()
+                            ->title('Mensaje leído')
+                            ->success()
+                            ->send($record->readBy);
+                    }
+                })
+                ->label('Leído'),
+
         ];
     }
 }
