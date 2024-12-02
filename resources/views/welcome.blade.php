@@ -127,10 +127,10 @@
 
     <section>
 
-        <div class="flex justify-center p-3 sm:py-20 bg-[#ffff88]">
-            <div id="default-carousel" class="relative w-full sm:max-w-[50%]" data-carousel="slide">
+        <div class="flex justify-center">
+            <div id="default-carousel" class="relative w-full" data-carousel="slide">
                 <!-- Carousel wrapper -->
-                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <div class="relative h-56 overflow-hidden md:h-96">
                     @php
                         $query = \App\Models\Featured::where('active', true);
                         $count = $query->count();
@@ -186,7 +186,7 @@
 
 
     </section>
-    <section class="pb-10 bg-[#ff8080]">
+    <section class="pb-10 bg-[#b6d7a8]">
         <div class=" w-full pt-8">
             <h1 class=" text-center head">
                 Novedades
@@ -198,7 +198,7 @@
 
     </section>
     {{-- Sección del Formulario --}}
-    <section class="bg-[#b6d7a8]">
+    <section class="bg-[#ffffff]">
         <div class=" w-full pt-8">
             <h1 class=" text-center head">
                 Dejanos un mensaje
@@ -208,7 +208,7 @@
         </div>
 
     </section>
-    <footer class="p-6">
+    <footer class="p-6 bg-[#b6d7a8] ">
         <div class="flex justify-center space-x-2 mb-10">
             <div>
                 <a href="https://web.facebook.com/profile.php?id=100063803154658" target="_blank"><img
