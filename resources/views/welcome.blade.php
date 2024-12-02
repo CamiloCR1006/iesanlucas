@@ -40,6 +40,10 @@
             font-family: "Instrument Serif", serif;
             font-size: 20px;
         }
+
+        .footer {
+            font-family: "Instrument Serif", serif;
+        }
     </style>
 </head>
 
@@ -204,6 +208,42 @@
         </div>
 
     </section>
+    <footer class="p-6">
+        <div class="flex justify-center space-x-2 mb-10">
+            <div>
+                <a href="https://web.facebook.com/profile.php?id=100063803154658" target="_blank"><img
+                        src="{{ asset('img/facebook.svg') }}" alt="Facebook" class="w-6 h-6"></a>
+            </div>
+            <div>
+                <a href="https://wa.me/3148508036" target="_blank"><img src="{{ asset('img/whatsapp.svg') }}"
+                        alt="Whatsapp" class="w-6 h-6"></a>
+            </div>
+            <div>
+                <a href="" target="_blank"><img src="{{ asset('img/x.svg') }}" alt="x"
+                        class="w-6 h-6"></a>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/@manuelherreramendoza6145" target="_blank"><img
+                        src="{{ asset('img/youtube.svg') }}" alt="x" class="w-6 h-6"></a>
+            </div>
+
+
+        </div>
+        <div class="md:px-20">
+            <hr class="border-black">
+            <div class="mt-10">
+                <p class="footer font-semibold text-center" style="font-size: 30px;">Institución Educativa San Lucas
+                </p>
+                <p class="footer text-center" style="font-size: 20px;">Calle 123, #45 Sur de Bolivar</p>
+                <div class="flex flex-wrap items-center space-x-1">
+                    <p class="footer" style="font-size: 15px;">Copyright </p> 
+                    <img src="{{ asset('img/copyright.svg') }}" alt="" class="w-3 h-3">
+                    <p class="footer">2024</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
 </body>
 
 </html>
