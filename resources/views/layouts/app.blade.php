@@ -94,15 +94,15 @@
                         class="focus:bg-[#b6d7a8] hover:bg-[#b6d7a8] px-5 py-3 rounded text-center flex-1">
                         Inicio
                     </a>
-                    <a href="gestion" id="gestion"
+                    <a href="management" id="gestion"
                         class="focus:bg-[#b6d7a8] hover:bg-[#b6d7a8] px-5 py-3 rounded text-center flex-1">
                         Gestión Académica
                     </a>
-                    <a href="conocenos"
+                    <a href="about"
                         class="focus:bg-[#b6d7a8] hover:bg-[#b6d7a8] px-5 py-3 rounded text-center flex-1">
                         Conócenos
                     </a>
-                    <a href="egresados"
+                    <a href="graduates"
                         class="focus:bg-[#b6d7a8] hover:bg-[#b6d7a8] px-5 py-3 rounded text-center flex-1">
                         Egresados
                     </a>
