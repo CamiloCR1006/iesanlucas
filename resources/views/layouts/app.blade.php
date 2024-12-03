@@ -44,6 +44,10 @@
             font-size: 20px;
         }
 
+        .font-inst {
+            font-family: "Instrument Serif", serif;
+        }
+
         .footer {
             font-family: "Instrument Serif", serif;
         }
@@ -86,7 +90,7 @@
 
                 <!-- Menú colapsable -->
                 <div class="w-full header justify-between">
-                    <a href="#" id="home"
+                    <a href="/" id="home"
                         class="focus:bg-[#b6d7a8] hover:bg-[#b6d7a8] px-5 py-3 rounded text-center flex-1">
                         Inicio
                     </a>

@@ -88,6 +88,4 @@
     </section>
 @endsection
 
-{{-- @section('footer')
-    
-@endsection --}}
+

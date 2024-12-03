@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    Hoasd
+    <div>
+        @livewire('section-calendar')
+
+        @livewire('section-plans')
+
+    </div>
 @endsection
