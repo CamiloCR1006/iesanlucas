@@ -69,8 +69,12 @@
                 document.getElementById('home').classList.add('bg-[#b6d7a8]');
             }
 
-            if (window.location.pathname == '/gestion') {
+            if (window.location.pathname == '/management') {
                 document.getElementById('gestion').classList.add('bg-[#b6d7a8]');
+            }
+
+            if (window.location.pathname == '/about') {
+                document.getElementById('about').classList.add('bg-[#b6d7a8]');
             }
 
 
@@ -98,7 +102,7 @@
                         class="focus:bg-[#b6d7a8] hover:bg-[#b6d7a8] px-5 py-3 rounded text-center flex-1">
                         Gestión Académica
                     </a>
-                    <a href="about"
+                    <a href="about" id="about"
                         class="focus:bg-[#b6d7a8] hover:bg-[#b6d7a8] px-5 py-3 rounded text-center flex-1">
                         Conócenos
                     </a>
