@@ -89,7 +89,7 @@
                 </div>
 
                 <!-- Menú colapsable -->
-                <div class="w-full header justify-between">
+                <div class="w-full header justify-between gap-2">
                     <a href="/" id="home"
                         class="focus:bg-[#b6d7a8] hover:bg-[#b6d7a8] px-5 py-3 rounded text-center flex-1">
                         Inicio
