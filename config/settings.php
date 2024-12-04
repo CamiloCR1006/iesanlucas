@@ -50,5 +50,15 @@ return [
         'handwriting' => 'Caligrafía',
         'science' => 'Ciencias',
         'biology' => 'Biología',
-    ]
+    ],
+
+    'levels_of_study' => [
+        'bachelor' => 'Bachiller',
+        'doctorate' => 'Doctorado',
+        'master' => 'Maestría',
+        'specialization' => 'Especialización',
+        'technical' => 'Técnico o Tecnólogo',
+        'undergraduate' => 'Profesional universitario',
+        'u_studend' => 'Estudiante universitario',
+    ],
 ];

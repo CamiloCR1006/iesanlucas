@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\TeacherResource\Pages;
-use App\Filament\Resources\TeacherResource\RelationManagers;
-use App\Models\Teacher;
+use App\Filament\Resources\SettingResource\Pages;
+use App\Filament\Resources\SettingResource\RelationManagers;
+use App\Models\Setting;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,33 +13,34 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class TeacherResource extends Resource
+class SettingResource extends Resource
 {
-    protected static ?string $model = Teacher::class;
+    protected static ?string $model = Setting::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user';
+    protected static ?string $navigationIcon = 'heroicon-o-wrench';
 
-    protected static ?string $modelLabel = "Profesor";
+    protected static ?string $modelLabel = "Configuración";
 
-    protected static ?string $pluralModelLabel = "Profesores";
+    protected static ?string $pluralModelLabel = "Configuraciones";
 
     protected static ?string $navigationGroup = "Conocenos";
-    
+
 
     public static function form(Form $form): Form
     {
         return $form
-            ->schema(Teacher::getForm());
+            ->schema(Setting::getForm());
     }
 
     public static function table(Table $table): Table
     {
         return $table
-            ->columns(Teacher::getColumns())
+            ->columns(Setting::getColumns())
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
@@ -61,9 +62,10 @@ class TeacherResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListTeachers::route('/'),
-            'create' => Pages\CreateTeacher::route('/create'),
-            'edit' => Pages\EditTeacher::route('/{record}/edit'),
+            'index' => Pages\ListSettings::route('/'),
+            'create' => Pages\CreateSetting::route('/create'),
+            'view' => Pages\ViewSetting::route('/{record}'),
+            'edit' => Pages\EditSetting::route('/{record}/edit'),
         ];
     }
 

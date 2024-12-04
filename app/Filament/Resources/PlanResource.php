@@ -23,6 +23,8 @@ class PlanResource extends Resource
 
     protected static ?string $pluralModelLabel = "Planes de área";
 
+    protected static ?string $navigationGroup = "Gestión académica";
+
     public static function form(Form $form): Form
     {
         return $form

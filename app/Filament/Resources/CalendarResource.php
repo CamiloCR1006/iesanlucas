@@ -23,6 +23,8 @@ class CalendarResource extends Resource
 
     protected static ?string $pluralModelLabel = "Calendarios";
 
+    protected static ?string $navigationGroup = "Gestión académica";
+
     public static function form(Form $form): Form
     {
         return $form

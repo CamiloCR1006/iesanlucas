@@ -81,6 +81,8 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
     {{-- Sección del Header --}}
 
     <section>
@@ -174,12 +176,11 @@
                     src="{{ asset('img/facebook.svg') }}" alt="Facebook" class="w-6 h-6"></a>
         </div>
         <div>
-            <a href="https://wa.me/3148508036" target="_blank"><img src="{{ asset('img/whatsapp.svg') }}"
-                    alt="Whatsapp" class="w-6 h-6"></a>
+            <a href="https://wa.me/3148508036" target="_blank"><img src="{{ asset('img/whatsapp.svg') }}" alt="Whatsapp"
+                    class="w-6 h-6"></a>
         </div>
         <div>
-            <a href="" target="_blank"><img src="{{ asset('img/x.svg') }}" alt="x"
-                    class="w-6 h-6"></a>
+            <a href="" target="_blank"><img src="{{ asset('img/x.svg') }}" alt="x" class="w-6 h-6"></a>
         </div>
         <div>
             <a href="https://www.youtube.com/@manuelherreramendoza6145" target="_blank"><img

@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\TeacherResource\Pages;
-use App\Filament\Resources\TeacherResource\RelationManagers;
-use App\Models\Teacher;
+use App\Filament\Resources\GraduateResource\Pages;
+use App\Filament\Resources\GraduateResource\RelationManagers;
+use App\Models\Graduate;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,34 +13,33 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class TeacherResource extends Resource
+class GraduateResource extends Resource
 {
-    protected static ?string $model = Teacher::class;
+    protected static ?string $model = Graduate::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user';
+    protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
 
-    protected static ?string $modelLabel = "Profesor";
+    protected static ?string $modelLabel = "Egresado";
 
-    protected static ?string $pluralModelLabel = "Profesores";
+    protected static ?string $pluralModelLabel = "Egresados";
 
-    protected static ?string $navigationGroup = "Conocenos";
-    
+    protected static ?string $navigationGroup = "Formularios";
 
     public static function form(Form $form): Form
     {
         return $form
-            ->schema(Teacher::getForm());
+            ->schema(Graduate::getForm());
     }
 
     public static function table(Table $table): Table
     {
         return $table
-            ->columns(Teacher::getColumns())
+            ->columns(Graduate::getColumns())
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -61,9 +60,10 @@ class TeacherResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListTeachers::route('/'),
-            'create' => Pages\CreateTeacher::route('/create'),
-            'edit' => Pages\EditTeacher::route('/{record}/edit'),
+            'index' => Pages\ListGraduates::route('/'),
+            #'create' => Pages\CreateGraduate::route('/create'),
+            #'edit' => Pages\EditGraduate::route('/{record}/edit'),
+            'view' => Pages\ViewGraduate::route('/{record}'),
         ];
     }
 

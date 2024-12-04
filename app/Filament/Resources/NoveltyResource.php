@@ -23,6 +23,8 @@ class NoveltyResource extends Resource
 
     protected static ?string $pluralModelLabel = "Novedades";
 
+    protected static ?string $navigationGroup = "Inicio";
+
     public static function form(Form $form): Form
     {
         return $form

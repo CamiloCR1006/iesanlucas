@@ -24,6 +24,8 @@ class FeedbackResource extends Resource
 
     protected static ?string $pluralModelLabel = "Mensajes";
 
+    protected static ?string $navigationGroup = "Formularios";
+
     public static function form(Form $form): Form
     {
         return $form

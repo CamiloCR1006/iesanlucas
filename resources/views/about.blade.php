@@ -2,13 +2,21 @@
 
 @section('content')
     <div class="text-center px-20">
+        @php
+            use App\Models\Setting;
+            $mision = Setting::where('slug', 'mision')->first();
+            $vision = Setting::where('slug', 'vision')->first();
+            $bandera = Setting::where('slug', 'bandera')->first();
+            $escudo = Setting::where('slug', 'escudo')->first();
+            $himno = Setting::where('slug', 'himno')->first();
+        @endphp
         <div class="mb-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div class="flex justify-center">
-                    <img src="{{ asset('img/escudo.png') }}" alt="Escudo" class="max-h-[300px]">
+                    <img src="{{ asset('storage/' . $escudo->value) }}" alt="Escudo" class="max-h-[300px]">
                 </div>
                 <div class="flex justify-center">
-                    <img src="{{ asset('img/bandera.png') }}" alt="Bandera">
+                    <img src="{{ asset('storage/' . $bandera->value) }}" alt="Bandera">
                 </div>
             </div>
         </div>
@@ -20,11 +28,7 @@
                     Misión
                 </h1>
                 <p class="mt-5">
-                    La Institución Educativa Departamental San José de la Salle, es una institución de carácter oficial, que
-                    ofrece educación en los niveles de preescolar, básica y media académica, con una formación integral y
-                    humanística, fundamentada en los principios lasallistas, que propende por la formación de personas
-                    autónomas, competentes, solidarias y comprometidas con la construcción de una sociedad justa y
-                    equitativa.
+                    {{ $mision->value }}
                 </p>
             </div>
             <div class="border border-white p-5 bg-white rounded-lg">
@@ -32,11 +36,17 @@
                     Visión
                 </h1>
                 <p class="mt-5">
-                    La Institución Educativa Departamental San José de la Salle, es una institución de carácter oficial, que
-                    ofrece educación en los niveles de preescolar, básica y media académica, con una formación integral y
-                    humanística, fundamentada en los principios lasallistas, que propende por la formación de personas
-                    autónomas, competentes, solidarias y comprometidas con la construcción de una sociedad justa y
-                    equitativa.
+                    {{ $vision->value }}
+                </p>
+            </div>
+        </div>
+        <div class="mt-5">
+            <div class="border border-white p-5 bg-white rounded-lg">
+                <h1 class="font-inst font-bold text-center" style="font-size: 35px;">
+                    Himno
+                </h1>
+                <p class="mt-5 text-center">
+                    {{ $himno->value }}
                 </p>
             </div>
         </div>

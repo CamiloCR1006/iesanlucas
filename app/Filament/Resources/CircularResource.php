@@ -22,6 +22,8 @@ class CircularResource extends Resource
     protected static ?string $modelLabel = "Circular";
 
     protected static ?string $pluralModelLabel = "Circulares";
+    
+    protected static ?string $navigationGroup = "Gestión académica";
 
     public static function form(Form $form): Form
     {

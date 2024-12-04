@@ -21,6 +21,8 @@ class SubjectResource extends Resource
 
     protected static ?string $pluralModelLabel = "Materias";
 
+    protected static ?string $navigationGroup = "Gestión académica";
+
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
     public static function form(Form $form): Form

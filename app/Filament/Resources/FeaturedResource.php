@@ -23,6 +23,8 @@ class FeaturedResource extends Resource
 
     protected static ?string $pluralModelLabel = "Destacadas";
 
+    protected static ?string $navigationGroup = "Inicio";
+
     public static function form(Form $form): Form
     {
         return $form
