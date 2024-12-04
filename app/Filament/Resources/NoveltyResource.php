@@ -17,7 +17,13 @@ class NoveltyResource extends Resource
 {
     protected static ?string $model = Novelty::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-newspaper';
+
+    protected static ?string $modelLabel = "Novedad";
+
+    protected static ?string $pluralModelLabel = "Novedades";
+
+    protected static ?string $navigationGroup = "Inicio";
 
     public static function form(Form $form): Form
     {
@@ -28,9 +34,7 @@ class NoveltyResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->columns([
-                //
-            ])
+            ->columns(Novelty::getColumnsTable())
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
             ])

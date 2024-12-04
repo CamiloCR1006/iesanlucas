@@ -9,6 +9,8 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -45,6 +47,23 @@ class Novelty extends Model
         return $this->belongsTo(User::class, 'owner_id', 'id');
     }
 
+
+    public static function getColumnsTable(): array
+    {
+        return [
+            ImageColumn::make('filepath')
+                ->label(self::$FILEPATH)
+                ->size(200),
+            TextColumn::make('title')
+                ->weight('bold')
+                ->label(self::$TITLE),
+            TextColumn::make('description')
+                ->wrap()
+                ->label(self::$DESCRIPTION),
+
+
+        ];
+    }
 
     public static function getSchemaForm(): array
     {

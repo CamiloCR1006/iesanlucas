@@ -17,7 +17,13 @@ class FeaturedResource extends Resource
 {
     protected static ?string $model = Featured::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-photo';
+
+    protected static ?string $modelLabel = "Destacada";
+
+    protected static ?string $pluralModelLabel = "Destacadas";
+
+    protected static ?string $navigationGroup = "Inicio";
 
     public static function form(Form $form): Form
     {
@@ -28,9 +34,7 @@ class FeaturedResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->columns([
-                //
-            ])
+            ->columns(Featured::getColumnsTable())
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
             ])
