@@ -39,7 +39,7 @@ class FeaturedResource extends Resource
                 Tables\Filters\TrashedFilter::make(),
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
+               Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
@@ -62,9 +62,9 @@ class FeaturedResource extends Resource
     {
         return [
             'index' => Pages\ListFeatureds::route('/'),
-            'create' => Pages\CreateFeatured::route('/create'),
-            'view' => Pages\ViewFeatured::route('/{record}'),
-            'edit' => Pages\EditFeatured::route('/{record}/edit'),
+            #'create' => Pages\CreateFeatured::route('/create'),
+            #'view' => Pages\ViewFeatured::route('/{record}'),
+            #'edit' => Pages\EditFeatured::route('/{record}/edit'),
         ];
     }
 
